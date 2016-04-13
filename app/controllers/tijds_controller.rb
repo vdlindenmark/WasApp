@@ -1,0 +1,2 @@
+class TijdsController < ApplicationController
+end
