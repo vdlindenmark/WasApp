@@ -1,0 +1,18 @@
+<h1>Machines toevoegen</h1>
+
+<%= form_for :machine, url: machine_path(@machine), method: :patch do |f| %>
+	<%= label_tag(:kind, "Type:") %><br />
+	<%= f.text_field :kind %>
+	<br /><br />
+
+	<%= label_tag(:machine_id, "Beschrijving:") %><br />
+	<%= f.integer :machine_id, size: "50x10" %>
+	<br /><br />
+
+	<%= label_tag(:url, "URL:") %><br />
+	<%= f.text_field :url %>
+	<br /><br />
+
+	<%= f.submit "Aanmaken" %>
+
+<% end %>

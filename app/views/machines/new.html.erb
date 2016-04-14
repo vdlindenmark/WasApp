@@ -1,0 +1,11 @@
+<%= form_for @machine, url: {action:"create"}, multipart: true do |f| %>
+	<%= label_tag(:kind, "Type:") %><br />
+	<%= f.number_field :kind %>
+	<br /><br />
+
+	<%= label_tag(:machine_id, "Machine:") %><br />
+	<%= f.number_field :machine_id, size: "50x10" %>
+	<br /><br />
+
+	<%= f.submit "Aanmaken" %>
+<% end %>

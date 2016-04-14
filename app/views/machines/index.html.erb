@@ -1,0 +1,6 @@
+<%= link_to 'Nieuwe aanmaken', new_machine_path %><br />
+
+<% @machines.each do |machine| %>
+<br/><b><%= machine.kind %></b><br/>
+<b><%= machine.machine_id %></b><br/>
+<% end %>
