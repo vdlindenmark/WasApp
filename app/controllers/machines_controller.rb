@@ -16,7 +16,7 @@ class MachinesController < ApplicationController
 
 	def destroy
 		@machine = Machine.find(params[:id])
-		@machine.destory
+		@machine.destroy
 	end
 
 	def update
@@ -32,7 +32,12 @@ class MachinesController < ApplicationController
 	def create
 		@machine = Machine.new(machine_params)
 		if @machine.save
-			redirect_to machines_path
+			redirect_to @machine
 		end
 	end
+
+	private
+  	def machine_params
+  		params.require(:machine).permit(:kind, :machine_id)
+  	end
 end
