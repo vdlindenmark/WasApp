@@ -17,4 +17,8 @@ class TijdsController < ApplicationController
 		@tijd = Tijd.new()
 	end
 
+	private
+	def tijd_params
+  		params.require(:tijd).permit(:end_datetime)
+  	end
 end

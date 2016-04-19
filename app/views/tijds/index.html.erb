@@ -1,21 +1,21 @@
-<h1>Vet, zie hieronder alle items</h1>
+<h1>Vet, zie hieronder alle tijds</h1>
 
-<%= link_to 'Nieuwe aanmaken', new_item_path %><br /><br /><br />
+<%= link_to 'Nieuwe aanmaken', new_tijd_path %><br /><br /><br />
 <section>
-	<% @items.each do |item| %>
-		<a href="<%= item.url %>">
+	<% @tijd.each do |tijd| %>
+		<a href="<%= tijd.url %>">
 			<article>
 				<header>
-					<h1><%= item.title %></h1><%= link_to 'Destroy', item_path(item),
+					<h1><%= tijd.title %></h1><%= link_to 'Destroy', tijd_path(tijd),
 				       								method: :delete,
-				              				data: { confirm: 'Weet je dat echt heel zeker?' } %> <%= link_to 'Aanpassen', edit_item_path(item) %>
+				              				data: { confirm: 'Weet je dat echt heel zeker?' } %> <%= link_to 'Aanpassen', edit_tijd_path(tijd) %>
 					<div class="clearfix"></div>
 					<br />
 				</header>
 				<content>
-					<%= item.description %><br />
-					<%= image_tag(item.portfolio_image_url(:thumb)) if item.portfolio_image? %>
-					<% item.categories.each do |category| %>
+					<%= tijd.description %><br />
+					<%= image_tag(tijd.portfolio_image_url(:thumb)) if tijd.portfolio_image? %>
+					<% tijd.categories.each do |category| %>
 						<%= category.title %>
 					<% end %>
 				</content>

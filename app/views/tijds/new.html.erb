@@ -1,17 +1,17 @@
-<h1>Items#new</h1>
+<h1>Nieuwe wasbeurt toevoegen</h1>
 
 <%= form_for @tijd, url: {action:"create"}, multipart: true do |f| %>
 
-	<%= label_tag(:machine, "Machine:") %><br />
-	<%= f.text_field :machine %>
+	<%#= label_tag(:machine, "Machine:") %><br />
+	<%#= f.text_field :machine %>
 	<br /><br />
 
-	<%= label_tag(:type, "Type:") %><br />
-	<%= f.text_area :type %>
+	<%#= label_tag(:type, "Type:") %><br />
+	<%#= f.text_area :type %>
 	<br /><br />
 
-	<%= label_tag(:datetime, "URL:") %><br />
-	<%= f.datetime_field :datetime %>
+	<%= label_tag(:end_datetime, "Hoelang duurt je wasbeurt?") %><br /> <!-- uiteindelijk wel opslaan als eind tijd! Dus het ingevulde aantal minuten bij de eindtijd optellen. -->
+	<%= f.number_field :end_datetime %>
 	<br /><br />
 
 	<%= f.submit "Reserveren" %>
