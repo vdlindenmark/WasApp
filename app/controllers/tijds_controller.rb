@@ -1,4 +1,5 @@
 class TijdsController < ApplicationController
+	belongs_to :machines
 
 	def create
 	  	@tijd = Tijd.new(tijd_params)
