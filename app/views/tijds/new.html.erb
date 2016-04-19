@@ -2,11 +2,10 @@
 
 <%= form_for @tijd, url: {action:"create"}, multipart: true do |f| %>
 
-<%= check_box_tag(:pet_dog) %>
-<%= label_tag(:pet_dog, "I own a dog") %>
-<%= check_box_tag(:pet_cat) %>
-<%= label_tag(:pet_cat, "I own a cat") %>
-
+	<%= label_tag(:machines, "Machine:") %><br />
+	<%= f.collection_select :machines, Machine.all, :kind, :machine_id  %>
+	
+	<br /><br />
 
 	<%= f.submit "Reserveren" %>
 
