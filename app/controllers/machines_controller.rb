@@ -41,6 +41,6 @@ class MachinesController < ApplicationController
 
 	private
   	def machine_params
-  		params.require(:machine).permit(:kind, :machine_id)
+  		params.require(:machine).permit(:kind, :machine_id, :name)
   	end
 end

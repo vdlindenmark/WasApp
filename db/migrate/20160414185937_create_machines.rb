@@ -3,6 +3,7 @@ class CreateMachines < ActiveRecord::Migration
     create_table :machines do |t|
       t.integer :kind
       t.integer :machine_id
+      t.string :name
     end
   end
 end
