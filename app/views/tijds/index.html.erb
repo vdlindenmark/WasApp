@@ -1,0 +1,25 @@
+<h1>Vet, zie hieronder alle items</h1>
+
+<%= link_to 'Nieuwe aanmaken', new_tijd_path %><br /><br /><br />
+<section>
+	<% @items.each do |item| %>
+		<a href="<%= item.url %>">
+			<article>
+				<header>
+					<h1><%= item.title %></h1><%= link_to 'Destroy', item_path(item),
+				       								method: :delete,
+				              				data: { confirm: 'Weet je dat echt heel zeker?' } %> <%= link_to 'Aanpassen', edit_item_path(item) %>
+					<div class="clearfix"></div>
+					<br />
+				</header>
+				<content>
+					<%= item.description %><br />
+					<%= image_tag(item.portfolio_image_url(:thumb)) if item.portfolio_image? %>
+					<% item.categories.each do |category| %>
+						<%= category.title %>
+					<% end %>
+				</content>
+			</article>
+		</a>
+	<% end %>
+</section>

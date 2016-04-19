@@ -1,0 +1,13 @@
+<h1>Items#new</h1>
+
+<%= form_for @tijd, url: {action:"create"}, multipart: true do |f| %>
+
+<%= check_box_tag(:pet_dog) %>
+<%= label_tag(:pet_dog, "I own a dog") %>
+<%= check_box_tag(:pet_cat) %>
+<%= label_tag(:pet_cat, "I own a cat") %>
+
+
+	<%= f.submit "Reserveren" %>
+
+<% end %>
