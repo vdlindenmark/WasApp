@@ -3,6 +3,4 @@ Rails.application.routes.draw do
 
   get 'machines/index'
   get 'machines/show'
-
-  root "pins#index"
 end
