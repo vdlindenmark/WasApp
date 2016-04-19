@@ -1,5 +1,4 @@
 class MachinesController < ApplicationController
-	has_many :tijds
 
 	def index
 		@machines = Machine.all()
