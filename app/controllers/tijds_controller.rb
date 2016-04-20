@@ -8,6 +8,7 @@ class TijdsController < ApplicationController
 	end
 
 	def index
+		@machines = Machine.all()
 	end
 
 	def show
