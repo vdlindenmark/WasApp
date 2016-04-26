@@ -3,11 +3,15 @@ class TijdsController < ApplicationController
 	def create
 	  	@tijd = Tijd.new(tijd_params)
 
-	  	@tijdnu = Time.now
-	  	@tijdnu = @tijdnu.strftime("%Y-%m-%d %H:%M:%S")
+	  	@tijd_nu = Time.now
+	  	@tijd_nu.strftime("%d/%m/%Y %H:%M")
 
-	  	ingekomen_tijd =  Time.parse(params[:end_datetime])
-			@tijd.end_datettime = ingekomend_tijd
+	  	ingevulde_tijd = params[:tijd][:end_datetime]
+	  	ingevulde_tijd = ingevulde_tijd.to_i
+
+	  	@uiteindelijke_tijd = @tijd_nu + ingevulde_tijd.minutes
+	  	@uiteindelijke_tijd = @uiteindelijke_tijd.strftime("%d/%m/%Y %H:%M")
+	  	@tijd.end_datetime = @uiteindelijke_tijd
 
 	  	if @tijd.save
 	  		redirect_to tijds_path
