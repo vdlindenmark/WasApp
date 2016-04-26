@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20160414185937) do
 
   create_table "machines", force: :cascade do |t|
     t.integer "kind"
-    t.integer "machine_id"
     t.string  "name"
   end
 
