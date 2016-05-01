@@ -1,3 +1,116 @@
 // Place all the styles related to the machines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$color-blue:    #45d9fd;
+$color-alert:   #ee6e73;
+
+ body {
+     background-image: url('/image/mountain.jpeg');
+     background-attachment: fixed;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     font-family: 'Open Sans', sans-serif;
+     height: 100%;
+     width: 100%;
+     margin: 0;
+     position: absolute;
+
+ &:before {
+   content: '';
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       background-image: linear-gradient(to bottom,#4fc3f7,#45d9fd,#88dba3);
+
+       opacity: .6;
+   }
+}
+
+blockquote {
+    color: #ee6e73;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ee6e73;
+    background: lighten( $color-alert, 25% );
+    padding: 10px 20px 10px 5px;
+}
+
+i {
+    margin-right: 5px
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 60%;
+    height: 40%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+    transition: width 1s;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 80px;
+    transition: font-size 2s;
+}
+
+.bubbles {
+    display: inline-block;
+    font-family: arial;
+    position: relative;
+    font-size: 30px;
+    margin-top: -160px;
+}
+
+.bubbles h1 {
+    position: relative;
+    margin: 1em 0 0;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+}
+
+.individual-bubble {
+    position: absolute;
+    border-radius: 100%;
+    bottom: 10px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.animate {
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.year {
+    color: #fff;
+    z-index: 1;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .content {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}

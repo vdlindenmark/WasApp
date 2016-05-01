@@ -1,6 +1,21 @@
-<%= link_to 'Nieuwe aanmaken', new_machine_path %><br />
-<br /><br />
+<div class="bubbles">
+    <h1> WasApp </h1>
+</div>
 
-<% @machines.each do |machine| %>
-<b><%= machine.name %></b><br/>
-<% end %>
+<div class="content">
+
+    <blockquote>
+        <i class="material-icons">info</i> Hier moet een Carousel komen
+    </blockquote>
+
+    <%= link_to 'Nieuwe aanmaken', new_machine_path , :class => 'button waves-effect waves-light btn-large light-blue lighten-2'%><br />
+    <br /><br />
+
+
+
+    <% @machines.each do |machine| %>
+    <b><%= machine.name %></b><br/>
+    <% end %>
+
+</div>
+<div class="year"> - All rights reserved - </div>
