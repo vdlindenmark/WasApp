@@ -3,7 +3,7 @@
 <%= form_for @tijd, url: {action:"create"}, multipart: true do |f| %>
 
 	<%= label_tag(:machines, "Machine:") %><br />
-	<%= f.collection_select :machines, Machine.all, :id, :name %>
+	<%= f.collection_select :machine, Machine.all, :id, :name %>
 
 	<br /><br />
 

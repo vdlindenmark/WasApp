@@ -3,5 +3,5 @@
 <%= link_to 'Nieuwe aanmaken', new_tijd_path %><br /><br /><br />
 
 	<% @tijds.each do |tijd| %>
-		<%= tijd.machines %><i><%= tijd.end_datetime %></i>
+		<%= tijd.machine.name %><i><%= tijd.end_datetime %></i>
 	<% end %>

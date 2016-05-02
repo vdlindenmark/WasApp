@@ -1,3 +1,3 @@
 class Tijd < ActiveRecord::Base
-	belongs_to :machines
+	belongs_to :machine
 end
