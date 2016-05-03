@@ -1,4 +1,4 @@
-<h1>Items#new</h1>
+<h2 class="h2-title">Machine reserveren</h2>
 
 <%= form_for @tijd, url: {action:"create"}, multipart: true do |f| %>
 
@@ -7,11 +7,18 @@
 
 	<br /><br />
 
-	<%= label_tag(:end_datetime, "Duur van je wasbeurt: (in minuten)") %><br />
-	<%= f.number_field :end_datetime %>
+	<%= label_tag(:end_datetime, "Duur van de wasbeurt (in minuten):") %><br />
+
+	<form action="#">
+		<p class="range-field">
+			<%= f.number_field :end_datetime, :id => 'test5', :max => "100", :min => "0", :type => "range" %>
+		</p>
+	</form>
+
 
 	<br /><br />
 
-	<%= f.submit "Reserveren" %>
+	<%= link_to "Terug", root_path, :class => 'waves-effect waves-light btn-large blue-grey lighten-5' %>
+	<%= f.submit "Reserveren", :class => 'waves-effect waves-light btn-large light-blue darken-4'%>
 
 <% end %>
