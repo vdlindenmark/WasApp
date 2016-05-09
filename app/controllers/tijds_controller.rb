@@ -31,7 +31,7 @@ class TijdsController < ApplicationController
 
 	private
   	def tijd_params
-  		params.require(:tijd).permit(:end_datetime, :machine => [:id])
+  		params.require(:tijd).permit(:end_datetime, :machine_id)
   	end
 
 end

@@ -1,8 +1,8 @@
 class CreateTijds < ActiveRecord::Migration
   def change
     create_table :tijds do |t|
-      t.belongs_to :machine, index: true
       t.string :end_datetime
+      t.integer :machine_id
 
       t.timestamps null: false
     end

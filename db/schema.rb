@@ -19,12 +19,10 @@ ActiveRecord::Schema.define(version: 20160414185937) do
   end
 
   create_table "tijds", force: :cascade do |t|
-    t.integer  "machine_id"
     t.string   "end_datetime"
+    t.integer  "machine_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
-
-  add_index "tijds", ["machine_id"], name: "index_tijds_on_machine_id"
 
 end
