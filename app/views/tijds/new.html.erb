@@ -1,4 +1,4 @@
-<h2 class="h2-title">Machine reserveren</h2>
+<h2 class="h2-title">Wasmachine reserveren</h2>
 
 <%= form_for @tijd, url: {action:"create"}, multipart: true do |f| %>
 
@@ -18,7 +18,9 @@
 
 	<br /><br />
 
-	<%= link_to "Terug", root_path, :class => 'waves-effect waves-light btn-large blue-grey lighten-5' %>
-	<%= f.submit "Reserveren", :class => 'waves-effect waves-light btn-large light-blue darken-4'%>
+	<div class="row">
+		<%= link_to "Terug", root_path, :class => 'waves-effect waves-light btn-large blue-grey lighten-5' %>
+		<%= f.submit "Reserveren", :class => 'waves-effect waves-light btn-large light-blue darken-4'%>
+	</div>
 
 <% end %>

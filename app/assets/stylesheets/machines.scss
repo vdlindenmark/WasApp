@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
 $color-blue:    #45d9fd;
 $color-alert:   #ee6e73;
+$color-text:    #333;
 
  body {
      background-image: url('/image/mountain.jpeg');
@@ -34,6 +38,8 @@ $color-alert:   #ee6e73;
    }
 }
 
+
+
 blockquote {
     color: #ee6e73;
     display: flex;
@@ -61,10 +67,13 @@ i {
     padding: 30px 0;
     transition: width 1s;
     text-align: center;
+    min-height: 60%;
+    max-height: 6 0%;
+    position: relative;
 }
 
 
-h1 {
+.h1-title {
     font-family: 'Luckiest Guy', cursive;
     font-size: 90px;
     transition: font-size 2s;
@@ -80,7 +89,7 @@ h1 {
     font-family: arial;
     position: relative;
     font-size: 30px;
-    margin-top: -160px;
+    margin-top: -40px;
 }
 
 .bubbles h1 {
@@ -107,7 +116,7 @@ h1 {
 .year {
     color: #fff;
     z-index: 1;
-    font-size: 10px;
+    font-size: 13px;
     margin-top: 10px;
 }
 
@@ -122,6 +131,9 @@ h1 {
     //margin-top: 30px;
 	//border: 1px solid red;
     position: relative;
+    margin-bottom: 20px;
+    color: $color-text;
+    font-size: 13px;
 }
 #carousel {
 	//margin-top: -105px;
@@ -140,37 +152,57 @@ h1 {
 	width: 100%;
 	height: auto;
 }
-#carousel div span {
-	display: none;
-}
-#carousel div:hover span {
-	background-color: #333;
-	color: #fff;
-	display: inline-block;
-	width: 100px;
-	padding: 2px 0;
-	margin: 0 0 0 -50px;
-	position: absolute;
-	bottom: 30px;
-	left: 50%;
-	border-radius: 3px;
-}
+// #carousel div span {
+// 	display: none;
+// }
+// #carousel div:hover span {
+// 	background-color: #333;
+// 	color: #fff;
+// 	display: inline-block;
+// 	width: 100px;
+// 	padding: 2px 0;
+// 	margin: 0 0 0 -50px;
+// 	position: absolute;
+// 	bottom: 30px;
+// 	left: 50%;
+// 	border-radius: 3px;
+// }
 
 .value {
     display: none;
 }
+// 
+// input[type=range]+.thumb .value {
+//     background: red;
+// }
+//
+// input[type=range]+.thumb {
+//     background: red;
+// }
 
 .new_tijd {
     width: 50%;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+    //border: 1px solid red;
+}
 
-@media (max-width: 600px) {
+
+@media (max-width: 900px) {
     .content {
         width: 90%;
     }
 
-    h1 {
+    .h1-title {
         font-size: 60px;
+    }
+
+    .new_tijd, .row{
+        width: 80%;
     }
 }
