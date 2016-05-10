@@ -19,7 +19,8 @@ ActiveRecord::Schema.define(version: 20160414185937) do
   end
 
   create_table "tijds", force: :cascade do |t|
-    t.datetime "end_datetime"
+    t.string   "end_datetime"
+    t.integer  "machine_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

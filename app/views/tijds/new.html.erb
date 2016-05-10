@@ -2,8 +2,8 @@
 
 <%= form_for @tijd, url: {action:"create"}, multipart: true do |f| %>
 
-	<%= label_tag(:machines, "Machine:") %><br />
-	<%= f.collection_select :machines, Machine.all, :machine_id, :name %>
+	<%= label_tag(:machine_id, "Machine:") %><br />
+	<%= f.collection_select :machine_id, Machine.all, :id, :name %>
 
 	<br /><br />
 
@@ -14,7 +14,6 @@
 			<%= f.number_field :end_datetime, :id => 'test5', :max => "100", :min => "0", :type => "range" %>
 		</p>
 	</form>
-
 
 	<br /><br />
 
