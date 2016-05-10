@@ -7,8 +7,7 @@ class Tijd < ActiveRecord::Base
 		tijds = Tijd.where('end_datetime < ?', @tijd_nu)
 
 		tijds.each do |tijd|
-			#tijd.destroy
-			puts tijd.end_datetime
+			tijd.destroy
 		end
 	end
 end
