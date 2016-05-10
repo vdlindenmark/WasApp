@@ -9,11 +9,9 @@
 
 	<%= label_tag(:end_datetime, "Duur van de wasbeurt (in minuten):") %><br />
 
-	<form action="#">
-		<p class="range-field">
-			<%= f.number_field :end_datetime, :id => 'test5', :max => "100", :min => "0", :type => "range" %>
-		</p>
-	</form>
+	<p class="range-field">
+		<%= f.number_field :end_datetime, :id => 'test5', :max => "100", :min => "0", :type => "range" %>
+	</p>
 
 	<br /><br />
 
