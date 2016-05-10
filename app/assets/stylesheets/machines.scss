@@ -25,6 +25,11 @@ $color-text:    #333;
      margin: 0;
      position: absolute;
 
+
+select {
+    display: block !important;
+}
+
  &:before {
    content: '';
        position: absolute;
@@ -168,9 +173,9 @@ i {
 // 	border-radius: 3px;
 // }
 
-.value {
+//.value {
 //    display: none;
-}
+//}
 // 
 // input[type=range]+.thumb .value {
 //     background: red;
