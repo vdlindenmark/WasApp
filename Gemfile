@@ -12,7 +12,9 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # //Onderstaande zijn zelf toegevoegd\\
-gem 'seed_dump'
+gem 'seed_dump' #voor database output
+gem 'whenever', :require => false #voor cronjob
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
