@@ -1,0 +1,10 @@
+Warning: You're using Rubygems 2.0.14.1 with Spring. Upgrade to at least Rubygems 2.1.0 and run `gem pristine --all` for better startup performance.
+09/05/2016 15:05
+09/05/2016 16:08
+10/05/2016 16:15
+Running via Spring preloader in process 8197
+Warning: You're using Rubygems 2.0.14.1 with Spring. Upgrade to at least Rubygems 2.1.0 and run `gem pristine --all` for better startup performance.
+09/05/2016 15:05
+09/05/2016 16:08
+10/05/2016 16:15
+Running via Spring preloader in process 8210
