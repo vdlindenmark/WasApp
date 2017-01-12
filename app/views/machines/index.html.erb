@@ -1,6 +1,6 @@
 <%= link_to 'Nieuwe aanmaken', new_machine_path %><br />
 <br /><br />
-
 <% @machines.each do |machine| %>
-<b><%= machine.name %></b><br/>
+	<%= machine.id %>
+	<b><%= machine.name %></b><br/>
 <% end %>

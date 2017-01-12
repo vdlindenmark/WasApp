@@ -1,7 +1,11 @@
 class MachinesController < ApplicationController
 
 	def index
-		@machines = Machine.all()
+		render "tijds/index"
+		@machines = Tijds.all()
+
+
+
 	end
 
 	def new
